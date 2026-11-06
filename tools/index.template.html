@@ -104,12 +104,21 @@
     <p class="kicker reveal"><span class="num">٢</span>القرآن الكريم</p>
     <h2 id="quran-title" class="reveal">المصحف كما عرفته، والتفسير على بُعد لمسة.</h2>
     <p class="intro reveal">مصحف المدينة بصفحاته، وطبعة ١٤٢١هـ برسم المطبوع، ونصّ متّصل للاستماع آيةً آية. ولكل نيّة مرجعها: تلاوة وتدبّر وحفظ ومراجعة.</p>
+    <ul class="counts reveal" aria-label="المصحف بالأرقام">
+      <li><b>+١٠٠</b><span>قارئ</span></li>
+      <li><b>١٣</b><span>تفسيرًا</span></li>
+      <li><b>١٨</b><span>ترجمةً في ١٧ لغة</span></li>
+      <li><b>٤</b><span>مراجع للقراءة</span></li>
+    </ul>
 
     <div class="scrolly">
       <div class="stage" aria-hidden="true">
         <div class="phone">
           <x-shot name="mushaf" data-step="mushaf" class="on" alt=""></x-shot>
           <x-shot name="ayah" data-step="ayah" alt=""></x-shot>
+          <x-shot name="mushaf-play" data-step="recite" alt=""></x-shot>
+          <x-shot name="mushaf-playing" data-step="follow" alt=""></x-shot>
+          <x-shot name="mushaf-topics" data-step="topics" alt=""></x-shot>
           <x-shot name="ayah-image" data-step="share" alt=""></x-shot>
           <x-shot name="quran" data-step="modes" alt=""></x-shot>
         </div>
@@ -124,10 +133,30 @@
           <h3>كلُّ ما يخصّ الآية</h3>
           <p>المس الآية مرتين: التفسير والتراجم والموضوع ومعاني الكلمات وأسباب النزول والإعراب والبلاغة والمتشابهات، كلٌّ في قسمه. واستمع للآية وحدها، وانسخها أو شاركها.</p>
           <ul>
-            <li>تفاسير متعددة منها الميسّر والمختصر والسعدي وابن كثير، تُنزَّل لتُقرأ بلا اتصال.</li>
-            <li>تراجم معانٍ صادرة عن مجمع الملك فهد أو جهات رسمية.</li>
+            <li>١٣ تفسيرًا، منها الميسّر والمختصر والسعدي وابن كثير، تُنزَّل لتُقرأ بلا اتصال.</li>
+            <li>١٨ ترجمةً للمعاني في ١٧ لغة، صادرة عن مجمع الملك فهد أو جهات رسمية.</li>
           </ul>
           <div class="inline-shot phone"><x-shot name="ayah" alt="شاشة الآية الثالثة من سورة البقرة: نص الآية، وأزرار الاستماع والنسخ والمشاركة، وقسم التفسير الميسّر."></x-shot></div>
+        </div>
+        <div class="step point" data-step="recite">
+          <h3>استمع بصوت من تحب</h3>
+          <p>أكثر من مئة قارئ. حدّد بداية التلاوة ونهايتها: من أول الصفحة أو السورة، إلى آخرها أو بالمتابعة. واضبط السرعة من ٠٫٧٥× إلى ٢×، وكرّر المقطع للحفظ، واجعل للتلاوة مؤقّت نوم.</p>
+          <ul>
+            <li>تُتلى ترجمة الآية بعدها إن شئت.</li>
+            <li>نزّل التلاوة لتسمعها بلا اتصال.</li>
+          </ul>
+          <div class="inline-shot phone"><x-shot name="mushaf-play" alt="لوحة تشغيل التلاوة فوق صفحة المصحف: السورة والقارئ وترجمة بعد التلاوة، والبداية والنهاية، والسرعة والتكرار ومؤقّت النوم، وزرّا «شغّل» و«تنزيل»."></x-shot></div>
+        </div>
+        <div class="step point" data-step="follow">
+          <h3>التفسير يرافق التلاوة</h3>
+          <p>تُظلَّل الآية التي تُتلى، ويظهر بجانبها تفسيرها الميسّر أو معاني كلماتها أو ترجمتها، وينتقل معها آيةً بعد آية.</p>
+          <div class="inline-shot phone"><x-shot name="mushaf-playing" alt="المصحف أثناء التلاوة: الآية السادسة من سورة البقرة مظلّلة، وفوقها مربّع «التفسير الميسّر» بمعناها."></x-shot></div>
+        </div>
+        <div class="step point" data-step="topics">
+          <h3>المصحف الموضوعي، وزخرفةٌ تختارها</h3>
+          <p>لوّن الآيات بحسب موضوعها: آيات الله في الكون، والجنة والمؤمنون، والأحكام، وقصص الأنبياء والأمم؛ ودلالة كل لون مكتوبة. واختر خرطوشة اسم السورة وزخرفة الإطار ولون الورق.</p>
+          <p class="note">ويُلوَّن ما حفظته في المصحف، وتُحسب الصفحة في وردك إذا بقيت عليها نحو عشر ثوانٍ، وتظهر صفحتان متقابلتان إذا أدرت الهاتف.</p>
+          <div class="inline-shot phone"><x-shot name="mushaf-topics" alt="المصحف الموضوعي: مفتاح «لوّن الآيات حسب الموضوع» ودلالة الألوان الأزرق والأخضر والبنّي والأصفر."></x-shot></div>
         </div>
         <div class="step point" data-step="share">
           <h3>آيةٌ تشاركها كما هي</h3>
@@ -140,6 +169,11 @@
           <div class="inline-shot phone"><x-shot name="quran" alt="تبويب القرآن: زر «ابدأ القراءة» ومواضيع القرآن والتجويد الميسّر وتحفيظ الأطفال والحفظ والمراجعة، وقائمة السور."></x-shot></div>
         </div>
       </div>
+    </div>
+    <div class="gallery">
+      <figure class="reveal"><div class="phone sm"><x-shot name="mushaf-tools" alt="شريط أدوات المصحف أسفل الصفحة: الإعدادات والمعاني والزخرفة والمواضيع وتشغيل."></x-shot></div><figcaption>أدوات المصحف في شريط واحد</figcaption></figure>
+      <figure class="reveal"><div class="phone sm"><x-shot name="mushaf-meanings" alt="قائمة المعاني العائمة: التفسير الميسّر ومعاني الكلمات والترجمة وحجم الخط."></x-shot></div><figcaption>المعاني العائمة</figcaption></figure>
+      <figure class="reveal"><div class="phone sm"><x-shot name="mushaf-zakhrafa" alt="لوحة الزخرفة: خرطوشة السورة وزخرفة الصفحة ولون الخلفية."></x-shot></div><figcaption>الزخرفة والخلفية</figcaption></figure>
     </div>
   </div>
 </section>
@@ -185,6 +219,14 @@
       </div>
       <figure class="zoom reveal"><x-shot name="detail-tasbih" kind="detail" alt="تفصيلة من المسبحة: دائرة العدّ ممتلئة إلى ٢١ من ٣٣ تحت «سبحان الله»."></x-shot><figcaption>دائرة العدّ تمتلئ مع كل تسبيحة.</figcaption></figure>
     </div>
+    <div class="split flip">
+      <div class="point reveal">
+        <h3>فضل الأذكار: اقرأ الحديث، ثم اذكر</h3>
+        <p>٣٦ بطاقة في ثلاثة أقسام، منها أهوال يوم القيامة والجنة والنار، والقبر. لكلّ فضلٍ حديثه بمصدره ودرجته وشرحه، وتحته عدّاد الذكر نفسه.</p>
+        <p><strong>زيّن جنتك:</strong> يتحوّل عدد ما ذكرتَه إلى ما وُعد به في الحديث؛ فمن قال «سبحان الله العظيم وبحمده» غُرست له نخلة في الجنة، وتراها تُعدّ أمامك: نخلةً وشجرةً وكنزًا وقصرًا وبيتًا.</p>
+      </div>
+      <div class="reveal"><div class="phone"><x-shot name="fadl" alt="شاشة فضل الأذكار: بطاقة «ثقّل ميزانك بالذكر»، وقسم «زيّن جنتك» بأيقونات النخلة والشجرة والكنز والقصر والبيت والحسنة والميزان، ثم أهوال يوم القيامة."></x-shot></div></div>
+    </div>
   </div>
 </section>
 
@@ -193,24 +235,15 @@
     <p class="kicker reveal"><span class="num">٥</span>متابعة العبادات</p>
     <h2 id="track-title" class="reveal">«حاسِبوا أنفسكم قبل أن تُحاسَبوا»<span class="quote-src">من كلام عمر بن الخطاب رضي الله عنه</span></h2>
     <p class="intro reveal">سجّل صلاتك جماعةً أو منفردًا، وسننك وأذكارك وورد القرآن والصيام. ويعطيك وِرد نسبة يومك من الأقسام التي اخترت متابعتها وحدها.</p>
-    <div class="split">
-      <div class="reveal"><div class="phone"><x-shot name="worship" alt="شاشة عباداتي: متوسط الإنجاز ٥٦٪، وأفضل يوم الأحد، وجدول الصلوات الخمس بخيارات جماعة ومنفرد وقضاء."></x-shot></div></div>
-      <div class="point reveal">
-        <h3>أسبوعك في لمحة</h3>
-        <p>متوسط الإنجاز وأفضل يوم وما نقص، ومحاسبة أسبوعية تضع كل الأعمال على جدول واحد.</p>
-        <ul>
-          <li>تُضاف الصلوات الفائتة تلقائيًا، وتنقص كلما قضيتَ منها.</li>
-          <li>يوقف العذرُ الشرعي التتبّعَ دون أن تنقطع سلسلة أيامك.</li>
-          <li>الصيام وقضاء رمضان والستّ من شوال، وإمساكية رمضان.</li>
-          <li>حاسبة للزكاة بنصاب الذهب أو الفضة، وتذكير بحولان الحول.</li>
-        </ul>
-      </div>
+    <div class="benefits">
+      <figure class="reveal"><div class="phone"><x-shot name="worship" alt="شاشة عباداتي: متوسط الإنجاز ٥٦٪، وأفضل يوم الأحد، وجدول الصلوات الخمس بخيارات جماعة ومنفرد وقضاء."></x-shot></div>
+        <figcaption><h3>سجّل يومك</h3><p>الصلاة جماعةً أو منفردًا أو قضاءً، والسنن والأذكار والورد والصيام، كلٌّ بلمسة.</p></figcaption></figure>
+      <figure class="reveal"><div class="phone"><x-shot name="stats" alt="الإحصائيات: ملخص الأسبوع ووقفة مع أسبوعك وأرقام الصلاة."></x-shot></div>
+        <figcaption><h3>تابع تقدّمك</h3><p>ملخّص التزامك بالأهداف التي اخترتها، والعبادات التي سجّلتها خلال الأسبوع على جدول واحد.</p></figcaption></figure>
+      <figure class="reveal"><div class="phone"><x-shot name="worship-prefs" alt="إعدادات عباداتي: مفاتيح الأقسام المتابَعة من الصلوات الخمس إلى أعمال الجمعة، ووزن كل قسم في نسبة اليوم."></x-shot></div>
+        <figcaption><h3>خصّص أهدافك</h3><p>اختر ما تتابعه ووزنه في نسبة يومك، وحدّد وردك من القرآن وتسبيحك وأيام صيامك.</p></figcaption></figure>
     </div>
-    <figure class="zoom reveal" style="margin-top: clamp(40px, 6vw, 72px)"><x-shot name="detail-muhasaba" kind="detail" alt="جدول المحاسبة الأسبوعية: الفروض وأذكار ما بعد الصلاة لكل يوم من السبت إلى الجمعة بعلامات الإتمام."></x-shot><figcaption>المحاسبة الأسبوعية: الخانة الممتلئة تمّت، والتي فيها نقطة تمّ بعضها.</figcaption></figure>
-    <div class="gallery">
-      <figure class="reveal"><div class="phone sm"><x-shot name="stats" alt="الإحصائيات: ملخص الأسبوع ووقفة مع أسبوعك وأرقام الصلاة."></x-shot></div><figcaption>الإحصائيات</figcaption></figure>
-      <figure class="reveal"><div class="phone sm"><x-shot name="qada" alt="الصلوات الفائتة: عدد الفوائت والمقضيّة في نوفمبر، وجدول الأيام."></x-shot></div><figcaption>الصلوات الفائتة</figcaption></figure>
-    </div>
+    <p class="more-link reveal"><a href="#g-track">استكشف كل أدوات المتابعة ←</a></p>
   </div>
 </section>
 
@@ -218,12 +251,25 @@
   <div class="wrap">
     <p class="kicker reveal"><span class="num">٦</span>المعرفة</p>
     <h2 id="know-title" class="reveal">علمٌ يُنتفَع به، بين يديك.</h2>
-    <p class="intro reveal">مكتبة بمئات الكتب تُنزَّل وتُقرأ داخل التطبيق، وقصص الأنبياء والسيرة والصحابة، والتاريخ الإسلامي على أيام السنة، وأسماء الله الحسنى، والحج والعمرة خطوة بخطوة، وإذاعات القرآن وبثّ الحرمين.</p>
+    <p class="intro reveal">مكتبة تُنزَّل كتبها وتُقرأ داخل التطبيق، وقصص الأنبياء والسيرة والصحابة، والتاريخ الإسلامي على أيام السنة، وأسماء الله الحسنى، والحج والعمرة خطوة بخطوة، وإذاعات القرآن والبث المباشر من الحرمين.</p>
+    <ul class="counts reveal" aria-label="المعرفة بالأرقام">
+      <li><b>٥٠٠٥</b><span>كتب في ١٤ قسمًا</span></li>
+      <li><b>+٢٥٠</b><span>إذاعة</span></li>
+      <li><b>٣</b><span>قنوات بث مباشر</span></li>
+    </ul>
     <div class="gallery">
       <figure class="reveal"><div class="phone sm"><x-shot name="library" alt="المكتبة: قسم القرآن وعلومه بتفسير السعدي وابن كثير والميسّر، مع زر تحميل لكل كتاب."></x-shot></div><figcaption>المكتبة</figcaption></figure>
       <figure class="reveal"><div class="phone sm"><x-shot name="prophets" alt="قصص الأنبياء: بطاقات آدم وإدريس ونوح وهود وإبراهيم ولوط وغيرهم."></x-shot></div><figcaption>قصص الأنبياء</figcaption></figure>
       <figure class="reveal"><div class="phone sm"><x-shot name="umrah" alt="مناسك العمرة: فيديو صفة العمرة، وخطوات العمرة بآدابها والإحرام من الميقات."></x-shot></div><figcaption>مناسك العمرة</figcaption></figure>
       <figure class="reveal"><div class="phone sm"><x-shot name="radio" alt="الإذاعات: إذاعات القرآن الكريم والتفسير بصورها."></x-shot></div><figcaption>الإذاعات</figcaption></figure>
+    </div>
+    <div class="split" style="margin-top: clamp(48px, 7vw, 96px)">
+      <div class="point reveal">
+        <h3>البث المباشر</h3>
+        <p>الحرم المكي، والمسجد النبوي، وقناة مكة، بثًّا مباشرًا داخل التطبيق، مع زرّ «العودة للمباشر» وتدوير العرض أفقيًا.</p>
+        <p class="note">يحتاج اتصالًا بالإنترنت.</p>
+      </div>
+      <div class="reveal"><div class="phone"><x-shot name="live" alt="البث المباشر من الحرم المكي داخل التطبيق، مع زرّ «العودة للمباشر»."></x-shot></div></div>
     </div>
   </div>
 </section>

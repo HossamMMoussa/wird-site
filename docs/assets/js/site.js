@@ -108,7 +108,7 @@
       box.classList.toggle('wide', !!img.closest('.zoom'));
       box.showModal();
     };
-    document.querySelectorAll('.phone img, .zoom img').forEach((img) => {
+    document.querySelectorAll('.phone img, .zoom img, .feature .thumb img').forEach((img) => {
       if (!img.alt || img.closest('[aria-hidden="true"]')) return;
       img.classList.add('zoomable');
       img.tabIndex = 0;

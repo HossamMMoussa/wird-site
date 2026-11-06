@@ -56,6 +56,16 @@ SHOTS = {
     'dark-mushaf': '41-dark-mushaf.png',
     'dark-athkar': '42-dark-athkar.png',
     'dark-worship': '43-dark-worship.png',
+    'fadl': '50-fadl-list.png',
+    'fadl-qabr': '51-fadl-qabr.png',
+    'live': '52-live-makkah.png',
+    'mushaf-tools': '54-mushaf-toolbar.png',
+    'mushaf-topics': '55-mushaf-topics.png',
+    'mushaf-zakhrafa': '56-mushaf-zakhrafa.png',
+    'mushaf-meanings': '57-mushaf-meanings.png',
+    'mushaf-play': '59-mushaf-play.png',
+    'mushaf-playing': '60-mushaf-playing.png',
+    'worship-prefs': '61-worship-prefs.png',
 }
 
 # تفاصيل مكبّرة: (الملف الأصلي، (يسار، أعلى، يمين، أسفل)) بإحداثيات اللقطة الأصلية

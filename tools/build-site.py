@@ -65,7 +65,8 @@ def features_html() -> str:
             dl = ''.join(f'<dt>{esc(k)}</dt><dd>{esc(v)}</dd>' for k, v in rows if v and v != '—')
             thumb = ''
             if f.get('shot') and (IMG / f'{f["shot"]}-540.webp').exists():
-                thumb = (f'<div class="thumb"><img src="assets/img/{f["shot"]}-540.webp" width="540" height="1200" '
+                thumb = (f'<div class="thumb"><img src="assets/img/{f["shot"]}-540.webp" '
+                         f'srcset="assets/img/{f["shot"]}-540.webp 540w, assets/img/{f["shot"]}-1080.webp 1080w" sizes="140px" width="540" height="1200" '
                          f'loading="lazy" decoding="async" alt="لقطة من التطبيق: {esc(f["t"])}"></div>')
             out.append(
                 f'<details class="feature" id="f-{f["id"]}"><summary><span>{esc(f["t"])}</span>'
