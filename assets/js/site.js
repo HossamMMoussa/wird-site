@@ -74,7 +74,14 @@
           const a = links.get(e.target.id);
           if (a) {
             a.setAttribute('aria-current', 'true');
-            a.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+            // نحرّك شريط الفصول وحده أفقيًا (scrollIntoView ممكن يحرّك الصفحة كلها)
+            const bar = a.parentElement;
+            const br = bar.getBoundingClientRect();
+            const ar = a.getBoundingClientRect();
+            if (ar.left < br.left || ar.right > br.right) {
+              const delta = ar.left + ar.width / 2 - (br.left + br.width / 2);
+              bar.scrollBy({ left: delta, behavior: reduce ? 'auto' : 'smooth' });
+            }
           }
         }
       },
@@ -84,5 +91,41 @@
       const el = document.getElementById(id);
       if (el) io.observe(el);
     });
+  }
+
+  // ٤) تكبير اللقطة عند الضغط عليها، بالنسخة الأكبر (1080 بكسل). يعمل بلوحة المفاتيح، ويُغلق بـ Esc
+  const box = document.querySelector('.lightbox');
+  if (box && typeof box.showModal === 'function') {
+    const big = box.querySelector('img');
+    const cap = box.querySelector('.lb-caption');
+    let opener = null;
+    const open = (img) => {
+      opener = img;
+      const hi = (img.getAttribute('srcset') || '').split(',').map((s) => s.trim().split(' ')[0]).pop() || img.src;
+      big.src = hi;
+      big.alt = img.alt;
+      cap.textContent = img.alt;
+      box.classList.toggle('wide', !!img.closest('.zoom'));
+      box.showModal();
+    };
+    document.querySelectorAll('.phone img, .zoom img').forEach((img) => {
+      if (!img.alt || img.closest('[aria-hidden="true"]')) return;
+      img.classList.add('zoomable');
+      img.tabIndex = 0;
+      img.setAttribute('role', 'button');
+      img.setAttribute('aria-label', `تكبير: ${img.alt}`);
+      img.addEventListener('click', () => open(img));
+      img.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          open(img);
+        }
+      });
+    });
+    box.querySelector('.lb-close').addEventListener('click', () => box.close());
+    box.addEventListener('click', (e) => {
+      if (e.target === box) box.close();
+    });
+    box.addEventListener('close', () => opener && opener.focus());
   }
 })();
