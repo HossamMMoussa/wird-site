@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="شعار وِرد">
+  <!-- علامة وِرد: نجمة ثمانية (رُبع الحزب) ذهبية بحوافّ حادّة على مربع بلون الهوية -->
+  <rect width="100" height="100" rx="24" fill="#0F3540"/>
+  <g fill="#D2AE6B">
+    <rect x="23" y="23" width="54" height="54"/>
+    <rect x="23" y="23" width="54" height="54" transform="rotate(45 50 50)"/>
+  </g>
+  <path d="M50 33 L54.9 38.2 L62 38 L61.8 45.1 L67 50 L61.8 54.9 L62 62 L54.9 61.8 L50 67 L45.1 61.8 L38 62 L38.2 54.9 L33 50 L38.2 45.1 L38 38 L45.1 38.2 Z" fill="none" stroke="#0F3540" stroke-width="2.6" stroke-linejoin="miter"/>
+  <circle cx="50" cy="50" r="4.2" fill="#0F3540"/>
+</svg>

@@ -52,10 +52,7 @@ def shot_tag(m: re.Match) -> str:
 
 
 def features_html() -> str:
-    out = ['<p class="legend"><span>مدى التحقّق:</span>']
-    for k, label in STATUS.items():
-        out.append(f'<span><span class="badge {k}">{esc(label)}</span></span>')
-    out.append('</p><div class="index"><nav aria-label="أقسام المميزات"><ol>')
+    out = ['<div class="index"><nav aria-label="أقسام المميزات"><ol>']
     for gid, gtitle in GROUPS:
         n = sum(1 for f in F if f['g'] == gid)
         out.append(f'<li><a href="#g-{gid}">{esc(gtitle)} <span aria-hidden="true">({ar(n)})</span></a></li>')
@@ -63,7 +60,7 @@ def features_html() -> str:
     for gid, gtitle in GROUPS:
         out.append(f'<section class="group" id="g-{gid}" aria-labelledby="g-{gid}-t"><h3 id="g-{gid}-t">{esc(gtitle)}</h3>')
         for f in (x for x in F if x['g'] == gid):
-            rows = [('الفائدة', f['benefit']), ('مكانها', f['where']), ('طريقة الاستعمال', f['how']),
+            rows = [('مكانها', f['where']), ('طريقة الاستعمال', f['how']),
                     ('الخيارات', f['options']), ('ما تحتاجه', f['needs']), ('حدودها', f['limits'])]
             dl = ''.join(f'<dt>{esc(k)}</dt><dd>{esc(v)}</dd>' for k, v in rows if v and v != '—')
             thumb = ''
@@ -72,10 +69,24 @@ def features_html() -> str:
                          f'loading="lazy" decoding="async" alt="لقطة من التطبيق: {esc(f["t"])}"></div>')
             out.append(
                 f'<details class="feature" id="f-{f["id"]}"><summary><span>{esc(f["t"])}</span>'
-                f'<span class="badge {f["status"]}">{esc(STATUS[f["status"]])}</span></summary>'
+                f'<span class="sum">{esc(f["benefit"])}</span></summary>'
                 f'<div class="body"><dl>{dl}</dl>{thumb}</div></details>')
         out.append('</section>')
     out.append('</div></div>')
+    return '\n'.join(out)
+
+
+def status_html() -> str:
+    """قسم «حالة النسخة التجريبية»: مدى التحقق مجمّعًا، بعيدًا عن عرض المميزات."""
+    out = ['<div class="status-grid">']
+    for k, label in STATUS.items():
+        items = [f for f in F if f['status'] == k]
+        out.append(f'<div class="status-col {k}"><h3><span class="badge {k}">{ar(len(items))}</span> {esc(label)}</h3><ul>')
+        for f in items:
+            note = f' <span class="why">— {esc(f["needs"])}</span>' if k == 'device' and f['needs'] != '—' else ''
+            out.append(f'<li><a href="#f-{f["id"]}">{esc(f["t"])}</a>{note}</li>')
+        out.append('</ul></div>')
+    out.append('</div>')
     return '\n'.join(out)
 
 
@@ -112,16 +123,17 @@ def privacy_html() -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>سياسة الخصوصية — وِرد</title>
 <meta name="description" content="سياسة خصوصية تطبيق وِرد: ما يُحفظ على جهازك، وما يُرسل إلى خدمات خارجية عند استعمال بعض الميزات.">
-<link rel="icon" href="assets/img/icon.png">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/icon.png" sizes="192x192">
 <link rel="stylesheet" href="assets/css/site.css">
 <style>.doc {{ max-width: 760px; padding: 48px 0 80px; }} .doc h1 {{ font-size: clamp(34px, 5vw, 52px); color: var(--teal-deep); margin: 0 0 6px; }}
 .doc h2 {{ color: var(--teal-deep); font-size: 22px; margin: 34px 0 8px; }} .doc p {{ color: var(--ink-dim); }}</style>
 </head>
 <body>
-<header class="top"><div class="wrap"><a class="brand" href="./">وِرد</a><nav class="chapters"><a href="./">الصفحة الرئيسية</a></nav></div></header>
+<header class="top"><div class="wrap"><a class="brand" href="./"><img src="assets/img/mark.svg" width="32" height="32" alt="">وِرد</a><nav class="chapters"><a href="./">الصفحة الرئيسية</a></nav></div></header>
 <main class="wrap doc">
 <h1>سياسة الخصوصية</h1>
-<p>هذه السياسة منقولة كما هي من التطبيق.</p>
+<p>هذه السياسة منقولةٌ كما هي من التطبيق.</p>
 {chr(10).join(body)}
 </main>
 </body>
@@ -134,13 +146,15 @@ def main() -> None:
     page = re.sub(r'<x-shot\s+([^>]*)></x-shot>', shot_tag, tpl)
     page = re.sub(r'<!-- FEATURES:START -->.*?<!-- FEATURES:END -->',
                   lambda _: '<!-- FEATURES:START -->\n' + features_html() + '\n<!-- FEATURES:END -->', page, flags=re.S)
+    page = re.sub(r'<!-- STATUS:START -->.*?<!-- STATUS:END -->',
+                  lambda _: '<!-- STATUS:START -->\n' + status_html() + '\n<!-- STATUS:END -->', page, flags=re.S)
     page = page.replace('{{BASE}}', BASE)
     if '<x-shot' in page or '{{' in page:
         raise SystemExit('unrendered placeholders left')
     (DOCS / 'index.html').write_text(page, encoding='utf-8')
     (DOCS / 'privacy.html').write_text(privacy_html(), encoding='utf-8')
     (ROOT / 'FEATURES.md').write_text(features_md(), encoding='utf-8')
-    Image.open(APP / 'assets' / 'images' / 'icon.png').resize((192, 192), Image.LANCZOS).save(IMG / 'icon.png', optimize=True)
+    # أيقونات الموقع من علامة الهوية (mark.svg)، لا من أيقونة التطبيق الحالية (أيقونة Expo الافتراضية)
     (DOCS / '.nojekyll').write_text('', encoding='utf-8')
     print('built index.html, privacy.html, FEATURES.md;', len(F), 'features')
 
