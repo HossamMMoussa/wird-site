@@ -146,6 +146,7 @@ a { color: var(--teal); text-underline-offset: 4px; }
 .scrolly .steps { display: grid; gap: 0; }
 .scrolly .step { min-height: 72vh; display: flex; flex-direction: column; justify-content: center; padding-block: 24px; }
 .scrolly .step .inline-shot { display: none; }
+.scrolly.compact .step { min-height: 56vh; }
 
 /* الوضع الليلي */
 .night { background: var(--night); color: var(--night-ink); }

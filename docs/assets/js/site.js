@@ -47,18 +47,19 @@
     requestAnimationFrame(sweep);
   }
 
-  // ٢) فصل القرآن: الهاتف الثابت يعرض لقطة الخطوة الظاهرة
-  const stage = document.querySelector('.scrolly .stage');
-  if (stage && 'IntersectionObserver' in window) {
-    const shots = [...stage.querySelectorAll('img[data-step]')];
-    const show = (id) => shots.forEach((img) => img.classList.toggle('on', img.dataset.step === id));
-    const io = new IntersectionObserver(
-      (entries) => {
-        for (const e of entries) if (e.isIntersecting) show(e.target.dataset.step);
-      },
-      { rootMargin: '-45% 0px -45% 0px' },
-    );
-    document.querySelectorAll('.scrolly .step[data-step]').forEach((s) => io.observe(s));
+  // ٢) الفصول ذات الهاتف الثابت: يعرض لقطة الخطوة الظاهرة
+  if ('IntersectionObserver' in window) {
+    document.querySelectorAll('.scrolly').forEach((box) => {
+      const shots = [...box.querySelectorAll('.stage img[data-step]')];
+      const show = (id) => shots.forEach((img) => img.classList.toggle('on', img.dataset.step === id));
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const e of entries) if (e.isIntersecting) show(e.target.dataset.step);
+        },
+        { rootMargin: '-45% 0px -45% 0px' },
+      );
+      box.querySelectorAll('.step[data-step]').forEach((s) => io.observe(s));
+    });
   }
 
   // ٣) الفصل الحالي في شريط التنقّل
