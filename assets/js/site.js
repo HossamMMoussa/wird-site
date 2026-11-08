@@ -129,4 +129,24 @@
     });
     box.addEventListener('close', () => opener && opener.focus());
   }
+
+  // المشاركة
+  document.querySelectorAll('.share-row').forEach((row) => {
+    const url = row.dataset.url, text = row.dataset.text;
+    const enc = encodeURIComponent;
+    const set = (k, href) => { const a = row.querySelector(`[data-share="${k}"]`); if (a) a.href = href; };
+    set('whatsapp', `https://wa.me/?text=${enc(text + ' ' + url)}`);
+    set('telegram', `https://t.me/share/url?url=${enc(url)}&text=${enc(text)}`);
+    set('x', `https://twitter.com/intent/tweet?text=${enc(text)}&url=${enc(url)}`);
+    const native = row.querySelector('[data-share="native"]');
+    if (native && navigator.share) {
+      native.hidden = false;
+      native.addEventListener('click', () => navigator.share({ title: 'وِرد', text, url }).catch(() => {}));
+    }
+    const copy = row.querySelector('[data-share="copy"]');
+    if (copy) copy.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(url); copy.textContent = 'تم النسخ'; } catch { copy.textContent = url; }
+      setTimeout(() => { copy.textContent = 'نسخ الرابط'; }, 2500);
+    });
+  });
 })();

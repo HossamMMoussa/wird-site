@@ -34,7 +34,6 @@
       <a href="#athkar">الأذكار</a>
       <a href="#track">المتابعة</a>
       <a href="#know">المعرفة</a>
-      <a href="#place">القبلة والسفر</a>
       <a href="#data">بياناتك</a>
       <a href="#faq">أسئلة</a>
       <a href="#all">كل المميزات</a>
@@ -51,20 +50,20 @@
       <h1 id="hero-title">عبادات يومك،<br><em>أقربَ إليك.</em></h1>
       <p class="lead">القرآن والأذكار ومواقيت الصلاة وخطة الحفظ، في تطبيقٍ عربيٍّ واحد يعينك على الاستمرار.</p>
       <div class="cta-row">
-        <a class="btn primary" href="mailto:hossamtab1@gmail.com?subject=%D8%B7%D9%84%D8%A8%20%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9%20%D9%88%D9%90%D8%B1%D8%AF">اطلب النسخة التجريبية</a>
+        <a class="btn primary" href="https://expo.dev/artifacts/eas/2M5kXWdztC3nI8rpETQ-zLAiLALARU20DMwduoTVmHQ.apk" download>نزّل النسخة التجريبية</a>
         <a class="btn ghost" href="#prayer">اكتشف المميزات</a>
       </div>
       <ul class="facts" aria-label="مبادئ التطبيق">
-        <li>بلا حساب</li>
-        <li>بلا إعلانات</li>
-        <li>بلا أدوات تتبّع</li>
-        <li>بياناتك على جهازك</li>
+        <li>بدون إعلانات</li>
+        <li>بدون حساب</li>
+        <li>بدون تتبّع</li>
+        <li>مجانًا بالكامل، بجميع المميزات</li>
       </ul>
-      <p class="status-note">نسخةٌ تجريبية على أندرويد، تُرسَل بالطلب. وكلُّ الصور هنا لقطاتٌ حقيقية من التطبيق.</p>
+      <p class="status-note">لأجهزة أندرويد. وكلُّ الصور هنا لقطاتٌ حقيقية من التطبيق.</p>
     </div>
     <div class="phones reveal" aria-hidden="false">
-      <div class="phone sm back"><img src="assets/gif/adhan.gif" width="360" height="800" alt="شاشة الأذان: الصلاة القادمة الظهر بعد ساعة ونصف، ومواقيت يوم الجمعة في مكة المكرمة." loading="eager" fetchpriority="high" decoding="async"></div>
-      <div class="phone front"><img src="assets/gif/home.gif" width="360" height="800" alt="الشاشة الرئيسية في وِرد: بطاقة المواقيت في مكة المكرمة والصلاة القادمة الظهر، وتحتها عبادات اليوم: صلاة الفجر وأذكار الصباح وصلاة الضحى." loading="eager" fetchpriority="high" decoding="async"></div>
+      <div class="phone sm back"><img src="assets/img/adhan-540.webp" srcset="assets/img/adhan-540.webp 540w, assets/img/adhan-1080.webp 1080w" sizes="(max-width: 560px) 70vw, (max-width: 900px) 300px, 360px" width="540" height="1200" alt="شاشة الأذان: الصلاة القادمة الظهر بعد ساعة ونصف، ومواقيت يوم الجمعة في مكة المكرمة." loading="eager" fetchpriority="high" decoding="async"></div>
+      <div class="phone front"><img src="assets/img/home-540.webp" srcset="assets/img/home-540.webp 540w, assets/img/home-1080.webp 1080w" sizes="(max-width: 560px) 70vw, (max-width: 900px) 300px, 360px" width="540" height="1200" alt="الشاشة الرئيسية في وِرد: بطاقة المواقيت في مكة المكرمة والصلاة القادمة الظهر، وتحتها عبادات اليوم: صلاة الفجر وأذكار الصباح وصلاة الضحى." loading="eager" fetchpriority="high" decoding="async"></div>
     </div>
   </div>
 </section>
@@ -75,26 +74,54 @@
     <h2 id="prayer-title" class="reveal">حين يحين الوقت، يصلك النداء.</h2>
     <p class="intro reveal">مواقيت دقيقة تُحسب على جهازك لموقعك أو لمدينة تختارها، وعدّ تنازلي للصلاة القادمة، وتنبيه قبل الأذان وعنده وللإقامة.</p>
 
-    <div class="split">
-      <div class="point reveal">
-        <h3>مواقيت يومك وشهرك</h3>
-        <p>تنقّل بين الأيام، وافتح جدول الشهر كاملًا. واختر طريقة الحساب المعتمدة في بلدك ومذهبك في العصر، وعدّل التاريخ الهجري يومًا إن خالف الرؤيةَ في بلدك.</p>
-        <ul>
-          <li>منتصف الليل والثلث الأخير ووقت الضحى، مع تذكير اختياري.</li>
-          <li>مواقيت بلد آخر بتوقيته المحلي دون تغيير موقعك.</li>
-        </ul>
+    <div class="scrolly">
+      <div class="stage" aria-hidden="true">
+        <div class="phone">
+          <img src="assets/gif/prayer-month.gif" width="360" height="800" alt="" loading="lazy" decoding="async" class="on" data-step="month">
+          <img src="assets/gif/adhan-prefs.gif" width="360" height="800" alt="" loading="lazy" decoding="async" data-step="alerts">
+          <img src="assets/gif/other-times.gif" width="360" height="800" alt="" loading="lazy" decoding="async" data-step="other">
+          <img src="assets/gif/qibla.gif" width="360" height="800" alt="" loading="lazy" decoding="async" data-step="qibla">
+          <img src="assets/gif/mosques.gif" width="360" height="800" alt="" loading="lazy" decoding="async" data-step="mosques">
+          <img src="assets/img/travel-540.webp" srcset="assets/img/travel-540.webp 540w, assets/img/travel-1080.webp 1080w" sizes="(max-width: 560px) 70vw, (max-width: 900px) 300px, 360px" width="540" height="1200" alt="" loading="lazy" decoding="async" data-step="travel">
+        </div>
       </div>
-      <div class="reveal"><div class="phone"><img src="assets/gif/prayer-month.gif" width="360" height="800" alt="جدول مواقيت شهر نوفمبر ٢٠٢٦ في مكة المكرمة: الفجر والشروق والظهر والعصر والمغرب والعشاء لكل يوم." loading="lazy" decoding="async"></div></div>
-    </div>
-
-    <div class="split flip">
-      <div class="point reveal">
-        <h3>تنبيهٌ في وقته</h3>
-        <p>لكل صلاة تنبيهها: قبل الأذان بدقائق تحدّدها، وعند دخول الوقت بنصّ قصير أو بصوت مؤذن تختاره، وبعد الأذان للإقامة بمدة مسجدك.</p>
-        <p>وعلى أندرويد يطلب وِرد إذن «المنبّهات والتذكيرات» ليُجدول الأذان بتوقيت دقيق، ويرشدك إلى استثنائه من توفير البطارية.</p>
-        <p class="note">النظام لا يشغّل تسجيلًا طويلًا من إشعار مجدول، فيصل التنبيه بصوت الإشعار ويُكمل الأذان حين تفتح التطبيق منه. وتختلف بعض الأجهزة في إيقاف التطبيقات لتوفير البطارية.</p>
+      <div class="steps">
+        <div class="step point" data-step="month">
+          <h3>مواقيت يومك وشهرك</h3>
+          <p>تنقّل بين الأيام، وافتح جدول الشهر كاملًا. واختر طريقة الحساب المعتمدة في بلدك ومذهبك في العصر، وعدّل التاريخ الهجري يومًا إن خالف الرؤية.</p>
+          <p>منتصف الليل والثلث الأخير ووقت الضحى، مع تذكير اختياري.</p>
+          <div class="inline-shot phone"><img src="assets/gif/prayer-month.gif" width="360" height="800" alt="جدول مواقيت شهر كامل: الفجر والشروق والظهر والعصر والمغرب والعشاء لكل يوم." loading="lazy" decoding="async"></div>
+        </div>
+        <div class="step point" data-step="alerts">
+          <h3>تنبيهٌ في وقته</h3>
+          <p>لكل صلاة تنبيهها: قبل الأذان بدقائق تحدّدها، وعند دخول الوقت بنصّ قصير أو بصوت مؤذن تختاره، وبعد الأذان للإقامة بمدة مسجدك.</p>
+          <p>وعلى أندرويد يطلب وِرد إذن «المنبّهات والتذكيرات» ليُجدول الأذان بتوقيت دقيق، ويرشدك إلى استثنائه من توفير البطارية.</p>
+          <p>النظام لا يشغّل تسجيلًا طويلًا من إشعار مجدول، فيصل التنبيه بصوت الإشعار ويُكمل الأذان حين تفتح التطبيق منه. وتختلف بعض الأجهزة في ذلك.</p>
+          <div class="inline-shot phone"><img src="assets/gif/adhan-prefs.gif" width="360" height="800" alt="إعدادات الأذان: اختيار صوت المؤذن وموعد التنبيه لكل صلاة." loading="lazy" decoding="async"></div>
+        </div>
+        <div class="step point" data-step="other">
+          <h3>أضف منطقة أخرى</h3>
+          <p>ابحث عن دولة أو مدينة لترى مواقيت اليوم هناك بتوقيتها المحلي، دون تغيير موقعك. وأضفها بطاقةً ثابتة في صفحة الأذان لتراها كل يوم.</p>
+          <div class="inline-shot phone"><img src="assets/gif/other-times.gif" width="360" height="800" alt="مواقيت بلد آخر: البحث عن الرياض وعرض مواقيتها، وزر إضافتها كبطاقة ثابتة في صفحة الأذان." loading="lazy" decoding="async"></div>
+        </div>
+        <div class="step point" data-step="qibla">
+          <h3>القبلة بالبوصلة والخريطة</h3>
+          <p>سهم يشير إلى الكعبة ببوصلة جهازك، وخريطة بالخط من موقعك إليها، واختيار مكانك يدويًا إن ضعفت دقّة الموقع.</p>
+          <p>دقّة البوصلة تختلف بين الأجهزة؛ أبعد الهاتف عن المعادن.</p>
+          <div class="inline-shot phone"><img src="assets/gif/qibla.gif" width="360" height="800" alt="اتجاه القبلة: بوصلة بسهم نحو الكعبة، والخط إليها على الخريطة." loading="lazy" decoding="async"></div>
+        </div>
+        <div class="step point" data-step="mosques">
+          <h3>المساجد المحيطة</h3>
+          <p>خريطة بالعلامات وقائمة بالمسافات، بنطاق تختاره من كيلومتر إلى ١٥ كيلومترًا، وبحث بالاسم. من موقعك الحالي أو من مكان تختاره على الخريطة.</p>
+          <p>المساجد المحيطة تُجلب من OpenStreetMap وقد تنقصها مساجد.</p>
+          <div class="inline-shot phone"><img src="assets/gif/mosques.gif" width="360" height="800" alt="المساجد المحيطة: خريطة بالعلامات ونطاق البحث وقائمة بالأقرب." loading="lazy" decoding="async"></div>
+        </div>
+        <div class="step point" data-step="travel">
+          <h3>رخص السفر في وقتها</h3>
+          <p>إذا ابتعدت نحو ٨٠ كم عن مكان إقامتك ذكّرك وِرد بالقصر والجمع، وتُحدَّث المواقيت تلقائيًا بحسب مكانك.</p>
+          <div class="inline-shot phone"><img src="assets/img/travel-540.webp" srcset="assets/img/travel-540.webp 540w, assets/img/travel-1080.webp 1080w" sizes="(max-width: 560px) 70vw, (max-width: 900px) 300px, 360px" width="540" height="1200" alt="بطاقة السفر في شاشة عباداتي: تذكير بقصر الرباعية والجمع، وزر «أقمتُ هنا»." loading="lazy" decoding="async"></div>
+        </div>
       </div>
-      <figure class="zoom reveal"><img src="assets/img/detail-alarm-720.webp" srcset="assets/img/detail-alarm-720.webp 720w, assets/img/detail-alarm-1080.webp 1080w" sizes="(max-width: 900px) 92vw, 560px" width="720" height="460" alt="من إعدادات الأذان: «دقّة توقيت الأذان — التنبيهات مسموح لها بالوصول في وقتها الدقيق»، وخيار «الأذان كمنبّه»، وإرشاد لإعدادات البطارية." loading="lazy" decoding="async"><figcaption>من إعدادات الأذان: حالة إذن التوقيت الدقيق وخيار «الأذان كمنبّه».</figcaption></figure>
     </div>
   </div>
 </section>
@@ -103,14 +130,7 @@
   <div class="wrap">
     <p class="kicker reveal"><span class="num">٢</span>القرآن الكريم</p>
     <h2 id="quran-title" class="reveal">المصحف كما عرفته، والتفسير على بُعد لمسة.</h2>
-    <p class="intro reveal">مصحف المدينة بصفحاته، وطبعة ١٤٢١هـ برسم المطبوع، ونصّ متّصل للاستماع آيةً آية. ولكل نيّة مرجعها: تلاوة وتدبّر وحفظ ومراجعة.</p>
-    <ul class="counts reveal" aria-label="المصحف بالأرقام">
-      <li><b>+١١٠</b><span>قارئ</span></li>
-      <li><b>١٣</b><span>تفسيرًا</span></li>
-      <li><b>١٨</b><span>ترجمةً مكتوبة في ١٧ لغة</span></li>
-      <li><b>٢٦</b><span>ترجمةً صوتية في ١٩ لغة أجنبية</span></li>
-      <li><b>٤</b><span>مراجع للقراءة</span></li>
-    </ul>
+    <p class="intro reveal">مصحف المدينة بصفحاته، وطبعة ١٤٢١هـ برسم المطبوع، ونصّ متّصل للاستماع آيةً آية. ولكل نيّة مرجعها: تلاوة وتدبّر وحفظ ومراجعة، في أربعة مراجع للقراءة. وفيه أكثر من ١١٠ قرّاء، و١٣ تفسيرًا، و١٨ ترجمةً مكتوبة في ١٧ لغة، و٢٦ ترجمةً صوتية في ١٩ لغة أجنبية.</p>
 
     <div class="scrolly">
       <div class="stage" aria-hidden="true">
@@ -325,12 +345,7 @@
   <div class="wrap">
     <p class="kicker reveal"><span class="num">٦</span>المعرفة</p>
     <h2 id="know-title" class="reveal">علمٌ يُنتفَع به، بين يديك.</h2>
-    <p class="intro reveal">مكتبة تُنزَّل كتبها وتُقرأ داخل التطبيق، وقصص الأنبياء والسيرة والصحابة، والتاريخ الإسلامي على أيام السنة، وأسماء الله الحسنى، والحج والعمرة خطوة بخطوة، وإذاعات القرآن والبث المباشر من الحرمين.</p>
-    <ul class="counts reveal" aria-label="المعرفة بالأرقام">
-      <li><b>٥٠٠٥</b><span>كتب في ١٤ قسمًا</span></li>
-      <li><b>+٢٥٠</b><span>إذاعة</span></li>
-      <li><b>٣</b><span>قنوات بث مباشر</span></li>
-    </ul>
+    <p class="intro reveal">مكتبة تُنزَّل كتبها وتُقرأ داخل التطبيق، وقصص الأنبياء والسيرة والصحابة، والتاريخ الإسلامي على أيام السنة، وأسماء الله الحسنى، والحج والعمرة خطوة بخطوة، وإذاعات القرآن والبث المباشر من الحرمين. فيها ٥٠٠٥ كتب في ١٤ قسمًا، وأكثر من ٢٥٠ إذاعة، وثلاث قنوات بث مباشر.</p>
     <div class="scrolly compact">
       <div class="stage" aria-hidden="true">
         <div class="phone">
@@ -420,29 +435,9 @@
   </div>
 </section>
 
-<section class="chapter" id="place" aria-labelledby="place-title">
-  <div class="wrap">
-    <p class="kicker reveal"><span class="num">٧</span>القبلة والسفر</p>
-    <h2 id="place-title" class="reveal">أينما كنت، تعرف وجهتك.</h2>
-    <div class="split">
-      <div class="point reveal">
-        <h3>القبلة بالبوصلة والخريطة</h3>
-        <p>سهم يشير إلى الكعبة ببوصلة جهازك، وخريطة بالخط من موقعك إليها، واختيار مكانك يدويًا إن ضعفت دقّة الموقع.</p>
-        <h3 style="margin-top: 28px">رخص السفر في وقتها</h3>
-        <p>إذا ابتعدت نحو ٨٠ كم عن مكان إقامتك ذكّرك وِرد بالقصر والجمع، وتُحدَّث المواقيت تلقائيًا بحسب مكانك.</p>
-        <p class="note">دقّة البوصلة تختلف بين الأجهزة؛ أبعد الهاتف عن المعادن. والمساجد المحيطة تُجلب من OpenStreetMap وقد تنقصها مساجد.</p>
-      </div>
-      <div class="gallery" style="margin-top: 0">
-        <figure class="reveal"><div class="phone sm"><img src="assets/gif/qibla.gif" width="360" height="800" alt="اتجاه القبلة: بوصلة بسهم نحو الكعبة، و«الخط إلى الكعبة» على الخريطة." loading="lazy" decoding="async"></div><figcaption>اتجاه القبلة</figcaption></figure>
-        <figure class="reveal"><div class="phone sm"><img src="assets/img/travel-540.webp" srcset="assets/img/travel-540.webp 540w, assets/img/travel-1080.webp 1080w" sizes="(max-width: 560px) 70vw, (max-width: 900px) 300px, 360px" width="540" height="1200" alt="بطاقة السفر في شاشة عباداتي: تذكير بقصر الرباعية والجمع، وزر «أقمتُ هنا»." loading="lazy" decoding="async"></div><figcaption>وضع السفر</figcaption></figure>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="chapter night" id="night" aria-labelledby="night-title">
   <div class="wrap">
-    <p class="kicker reveal"><span class="num">٨</span>الوضع الليلي</p>
+    <p class="kicker reveal"><span class="num">٧</span>الوضع الليلي</p>
     <h2 id="night-title" class="reveal">هادئ في الليل، والمصحف على ورقه.</h2>
     <p class="intro reveal">فاتح وليلي أو بحسب النظام، وألوان متعددة، وحجم خط يناسبك. ويحتفظ المصحف بلون ورقه في الليل.</p>
     <div class="scrolly">
@@ -505,91 +500,27 @@
       <details><summary>هل أحتاج إلى حساب؟</summary><p>لا. لا حساب ولا بريد ولا رقم هاتف، ولا إعلانات ولا أدوات تتبّع.</p></details>
       <details><summary>هل يُرفع الأذان كاملًا والتطبيق مغلق؟</summary><p>يصلك تنبيه الأذان في وقته بصوت الإشعار، لأن النظام لا يشغّل تسجيلًا طويلًا من إشعارٍ مجدول. فإذا فتحتَ التطبيق من التنبيه أكمل الأذانَ بصوت المؤذن الذي اخترته. ولدقّة التوقيت على أندرويد اسمح بإذن «المنبّهات والتذكيرات».</p></details>
       <details><summary>أين تُحفظ بياناتي، وكيف أنقلها؟</summary><p>على جهازك وحده. ومن الإعدادات تُصدِّر نسخةً احتياطية في ملف تحفظه أو ترسله لنفسك، ثم تسترجعها على أي جهاز.</p></details>
-      <details><summary>هل يتوفر على آيفون؟</summary><p>النسخة التجريبية الحالية لأندرويد. وإصدار آيفون لم يُختبر بعد.</p></details>
-      <details><summary>كيف أجرّب التطبيق؟</summary><p>اطلب النسخة التجريبية بالبريد، فيصلك رابط التثبيت على أندرويد.</p></details>
+      <details><summary>هل يتوفر على آيفون؟</summary><p>الإصدار الحالي لأندرويد. وإصدار آيفون لم يُختبر بعد.</p></details>
+      <details><summary>كيف أجرّب التطبيق؟</summary><p>نزّل ملف التثبيت من الزر في أعلى الصفحة، وافتحه على هاتف أندرويد وأذن بالتثبيت من هذا المصدر.</p></details>
     </div>
   </div>
 </section>
 
-<section class="chapter alt" id="status" aria-labelledby="status-title">
-  <div class="wrap">
-    <p class="kicker">النسخة التجريبية</p>
-    <h2 id="status-title">حالة النسخة التجريبية</h2>
-    <p class="intro">جرّبنا الميزات على محاكي أندرويد بالنسخة الحالية، وبعضها يحتاج تجربةً على هاتفٍ حقيقي قبل الحكم عليه. هذه خلاصة ما تحقّقنا منه.</p>
-<!-- STATUS:START -->
-<div class="status-grid">
-<div class="status-col seen"><h3><span class="badge seen">٤٣</span> جُرِّبت على محاكي أندرويد</h3><ul>
-<li><a href="#f-times">مواقيت الصلاة</a></li>
-<li><a href="#f-month">مواقيت الشهر</a></li>
-<li><a href="#f-exact">التنبيه في وقته (أندرويد)</a></li>
-<li><a href="#f-nawafil">أوقات النوافل والليل</a></li>
-<li><a href="#f-mushaf">المصحف</a></li>
-<li><a href="#f-modes">مراجع القراءة</a></li>
-<li><a href="#f-ayah">شاشة الآية</a></li>
-<li><a href="#f-recite">تشغيل التلاوة</a></li>
-<li><a href="#f-follow">التفسير يرافق التلاوة</a></li>
-<li><a href="#f-topic-mushaf">المصحف الموضوعي</a></li>
-<li><a href="#f-zakhrafa">الزخرفة والخلفية</a></li>
-<li><a href="#f-share">مشاركة الآية صورة</a></li>
-<li><a href="#f-topics">مواضيع القرآن</a></li>
-<li><a href="#f-tajweed">التجويد الميسّر</a></li>
-<li><a href="#f-plan">خطة الحفظ</a></li>
-<li><a href="#f-kids">تحفيظ الأطفال</a></li>
-<li><a href="#f-athkar">الأذكار</a></li>
-<li><a href="#f-fadl">فضل الأذكار</a></li>
-<li><a href="#f-reader">قارئ الأذكار</a></li>
-<li><a href="#f-tasbih">المسبحة</a></li>
-<li><a href="#f-today">عبادات اليوم</a></li>
-<li><a href="#f-worship">عباداتي</a></li>
-<li><a href="#f-goals">الأهداف والأقسام</a></li>
-<li><a href="#f-stats">الإحصائيات</a></li>
-<li><a href="#f-muhasaba">المحاسبة الأسبوعية</a></li>
-<li><a href="#f-qada">الصلوات الفائتة</a></li>
-<li><a href="#f-excuse">العذر الشرعي</a></li>
-<li><a href="#f-fasting">الصيام</a></li>
-<li><a href="#f-imsakiya">إمساكية رمضان</a></li>
-<li><a href="#f-zakat">حاسبة الزكاة</a></li>
-<li><a href="#f-library">المكتبة</a></li>
-<li><a href="#f-prophets">قصص الأنبياء والسيرة والصحابة</a></li>
-<li><a href="#f-history">التاريخ الإسلامي</a></li>
-<li><a href="#f-asma">أسماء الله الحسنى</a></li>
-<li><a href="#f-quiz">أسئلة اليوم</a></li>
-<li><a href="#f-hajj">الحج والعمرة</a></li>
-<li><a href="#f-radio">الإذاعات</a></li>
-<li><a href="#f-live">البث المباشر</a></li>
-<li><a href="#f-travel">وضع السفر</a></li>
-<li><a href="#f-auto-location">الموقع التلقائي</a></li>
-<li><a href="#f-setup">إعداد التطبيق</a></li>
-<li><a href="#f-appearance">المظهر</a></li>
-<li><a href="#f-backup">النسخ الاحتياطي</a></li>
-</ul></div>
-<div class="status-col code"><h3><span class="badge code">٨</span> موثّقة من شيفرة التطبيق</h3><ul>
-<li><a href="#f-other-times">مواقيت بلد آخر</a></li>
-<li><a href="#f-mushaf-more">تفاصيل في المصحف</a></li>
-<li><a href="#f-tafsir">التفاسير والقرّاء والتراجم</a></li>
-<li><a href="#f-bookmarks">العلامات اليدوية</a></li>
-<li><a href="#f-spaced">المراجعة المتباعدة والتسميع</a></li>
-<li><a href="#f-offline-audio">صوت الأذكار بلا إنترنت</a></li>
-<li><a href="#f-assistant">المساعد</a></li>
-<li><a href="#f-privacy">الخصوصية</a></li>
-</ul></div>
-<div class="status-col device"><h3><span class="badge device">٤</span> تحتاج تجربةً على هاتف</h3><ul>
-<li><a href="#f-alerts">تنبيهات الأذان والإقامة</a> <span class="why">— إذن الإشعارات.</span></li>
-<li><a href="#f-voice-tasbih">التسبيح بالصوت</a> <span class="why">— إذن الميكروفون وخدمة التعرّف على الكلام في الجهاز.</span></li>
-<li><a href="#f-qibla">اتجاه القبلة</a> <span class="why">— الموقع، وبوصلة الجهاز.</span></li>
-<li><a href="#f-mosques">المساجد المحيطة</a> <span class="why">— الموقع واتصال؛ تُرسل الإحداثيات إلى خوادم OpenStreetMap.</span></li>
-</ul></div>
-</div>
-<!-- STATUS:END -->
-  </div>
-</section>
-
-<section class="cta-band" aria-labelledby="cta-title">
+<section class="cta-band share" id="share" aria-labelledby="cta-title">
   <div class="wrap">
     <img src="assets/img/mark.svg" width="64" height="64" alt="">
     <h2 id="cta-title">جرّب وِرد على أندرويد</h2>
-    <p>النسخة التجريبية متاحة بالطلب، ورأيك فيها يصنع الإصدار القادم.</p>
-    <a class="btn gold" href="mailto:hossamtab1@gmail.com?subject=%D8%B7%D9%84%D8%A8%20%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9%20%D9%88%D9%90%D8%B1%D8%AF">اطلب النسخة التجريبية</a>
+    <p>بدون إعلانات، بدون حساب، بدون تتبّع، ومجانًا بالكامل بجميع المميزات.</p>
+    <a class="btn gold" href="https://expo.dev/artifacts/eas/2M5kXWdztC3nI8rpETQ-zLAiLALARU20DMwduoTVmHQ.apk" download>نزّل النسخة التجريبية</a>
+    <blockquote class="share-hadith">«مَن دَلَّ على خيرٍ فله مثلُ أجرِ فاعلِه»<span class="quote-src">رواه مسلم</span></blockquote>
+    <p>شارك التطبيق مع من تحب، واحتسب الأجر في كل من انتفع به.</p>
+    <div class="share-row" data-url="https://hossammoussa1.github.io/wird-site/" data-text="وِرد: تطبيق عربي للعبادة اليومية، بدون إعلانات وبدون حساب وبدون تتبّع، ومجانًا بالكامل بجميع المميزات.">
+      <button type="button" class="btn ghost-light" data-share="native" hidden>مشاركة</button>
+      <a class="btn ghost-light" data-share="whatsapp" href="#" target="_blank" rel="noopener">واتساب</a>
+      <a class="btn ghost-light" data-share="telegram" href="#" target="_blank" rel="noopener">تيليجرام</a>
+      <a class="btn ghost-light" data-share="x" href="#" target="_blank" rel="noopener">إكس</a>
+      <button type="button" class="btn ghost-light" data-share="copy">نسخ الرابط</button>
+    </div>
   </div>
 </section>
 
@@ -692,7 +623,7 @@
     <div>
       <h2 class="foot-brand"><img src="assets/img/mark.svg" width="44" height="44" alt="">وِرد</h2>
       <p class="tagline">يومُك مع الله، في مكانٍ واحد.</p>
-      <p>تطبيقٌ عربيٌّ للعبادة اليومية على أندرويد، في مرحلته التجريبية.</p>
+      <p>تطبيقٌ عربيٌّ للعبادة اليومية على أندرويد.</p>
       <p><a href="privacy.html">سياسة الخصوصية</a></p>
     </div>
     <div>
