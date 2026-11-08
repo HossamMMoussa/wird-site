@@ -310,3 +310,9 @@ footer small { display: block; margin-top: 30px; color: #A9C0C4; font-size: 13.5
 .share-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 8px; }
 .btn.ghost-light { background: transparent; color: #fff; border: 1px solid rgba(255, 255, 255, 0.45); cursor: pointer; font: inherit; }
 .btn.ghost-light:hover { background: rgba(255, 255, 255, 0.12); border-color: #fff; }
+
+/* مشاركة أعلى الصفحة */
+.share-top { margin-top: 22px; }
+.share-label { display: block; font-size: 14px; color: var(--ink-dim, #5b6b70); margin-bottom: 8px; }
+.share-top .share-row { justify-content: flex-start; margin-top: 0; }
+.share-top .btn { padding: 8px 16px; font-size: 15px; cursor: pointer; font-family: inherit; }
