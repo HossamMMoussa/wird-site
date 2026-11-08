@@ -194,7 +194,7 @@ F = [
          where='عباداتي ← الصلوات الفائتة.', how='زرّ + كلما قضيت صلاة.',
          options='تعديل رصيد ما قبل التطبيق.', needs='—',
          limits='يعتمد الحساب على تسجيلك؛ إن صلّيت ولم تسجّل، صحّح السجل.'),
-    dict(g='track', id='excuse', t='العذر الشرعي', status='code',
+    dict(g='track', id='excuse', t='العذر الشرعي', status='seen', shot='excuse',
          benefit='يوقف تتبّع الصلوات المعذورة دون أن تنقطع سلسلة أيامك.',
          where='الإعدادات ← العذر الشرعي.', how='اختر الصلاة التي بدأ عندها العذر، ثم التي انتهى عندها.', options='—', needs='—', limits='—'),
     dict(g='track', id='fasting', t='الصيام', status='seen', shot='fasting',

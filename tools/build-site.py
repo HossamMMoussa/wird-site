@@ -16,6 +16,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / 'docs'
 IMG = DOCS / 'assets' / 'img'
+GIF = DOCS / 'assets' / 'gif'
 APP = ROOT.parent / 'wird'
 BASE = 'https://hossammoussa1.github.io/wird-site/'
 
@@ -34,6 +35,18 @@ def shot_tag(m: re.Match) -> str:
     flags = re.sub(r'([\w-]+)="[^"]*"', '', m.group(1)).split()
     name, alt = attrs['name'], attrs.get('alt', '')
     detail = attrs.get('kind') == 'detail'
+    gif = GIF / f'{name}.gif'
+    if not detail and gif.exists():
+        # لقطة متحرّكة مسجّلة من التطبيق نفسه (تمرير ولمس حقيقي) بدل الصورة الثابتة
+        gw, gh = Image.open(gif).size
+        extra = ''
+        if 'class' in attrs:
+            extra += f' class="{attrs["class"]}"'
+        if 'data-step' in attrs:
+            extra += f' data-step="{attrs["data-step"]}"'
+        loading = 'eager" fetchpriority="high' if 'eager' in flags else 'lazy'
+        return (f'<img src="assets/gif/{name}.gif" width="{gw}" height="{gh}" alt="{esc(alt)}" '
+                f'loading="{loading}" decoding="async"{extra}>')
     widths = (720, 1080) if detail else (540, 1080)
     small = IMG / f'{name}-{widths[0]}.webp'
     if not small.exists():
