@@ -36,7 +36,7 @@ def shot_tag(m: re.Match) -> str:
     name, alt = attrs['name'], attrs.get('alt', '')
     detail = attrs.get('kind') == 'detail'
     gif = GIF / f'{name}.gif'
-    if not detail and gif.exists():
+    if not detail and 'static' not in flags and gif.exists():
         # لقطة متحرّكة مسجّلة من التطبيق نفسه (تمرير ولمس حقيقي) بدل الصورة الثابتة
         gw, gh = Image.open(gif).size
         extra = ''
