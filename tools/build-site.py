@@ -18,7 +18,7 @@ DOCS = ROOT / 'docs'
 IMG = DOCS / 'assets' / 'img'
 GIF = DOCS / 'assets' / 'gif'
 APP = ROOT.parent / 'wird'
-BASE = 'https://hossammoussa1.github.io/wird-site/'
+BASE = 'https://hossammmoussa.github.io/wird-site/'
 
 sys.path.insert(0, str(ROOT / 'tools'))
 from features import F, GROUPS, STATUS  # noqa: E402
